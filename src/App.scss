@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap");
+@import "~bootstrap/scss/bootstrap";
+
+
+* {
+  font-family: "Roboto";
+
+}
+
+.particle-container {
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 0;
+  background-color: #021b39;
+}
+.sign-container{
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+  .page-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    .signin-container {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      min-height: 300px;
+      padding: 40px;
+      background: white;
+      border-radius: 20px;
+
+      .input-label {
+        font-size: 20px;
+        color: #282c34;
+        font-weight: normal;
+      }
+      .input-label:nth-child(2){
+        margin-top:10px;
+      }
+      .text{
+        margin-top: 10px;
+      }
+      .input-style {
+      }
+      .btn-styles {
+        margin-top: 25px;
+      }
+    }
+  }
+}
+.toast-style {
+  position: sticky;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgba(9, 5, 5, 0.85);
+  .toast-body {
+    color: white;
+  }
+}
+
+.page-container {
+  min-width: 100vh;
+  min-height: 100vh;
+  z-index: 2;
+  background-color: #E4EBF5;
+  .page-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding: 10px;
+    border-bottom: 1px solid #d9d9d9;
+    align-items: center;
+    .top-left {
+      font-size:24px;
+      font-weight: normal;
+      color:#5f5f5f;
+    }
+    .page-right {
+      .btn{
+        box-shadow: 
+        inset 0 0 15px rgba(55, 84, 170,0),
+        inset 0 0 20px rgba(255, 255, 255,0),
+        7px 7px 15px rgba(55, 84, 170,.15),
+        -7px -7px 20px rgba(255, 255, 255,1),
+        inset 0px 0px 4px rgba(255, 255, 255,.2);
+        background: #f1f3f6;
+        border:none;
+        color:#5f5f5f;
+        width:170px;
+        border: 1px solid #fce1e1;
+      }
+      .btn:hover {
+        box-shadow: 
+          inset 7px 7px 15px rgba(55, 84, 170,.15),
+          inset -7px -7px 20px rgba(255, 255, 255,1),
+          0px 0px 4px rgba(255, 255, 255,.2);
+      }
+      transition: box-shadow 399ms ease-in-out;
+    
+    }
+  }
+
+  .page-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    .nav-tabs{
+      border-bottom: none;
+      .nav-item:nth-child(2){
+        margin-left: 30px;
+      }
+      .nav-link.active{
+        border-color: transparent;
+        background-color: transparent;
+        box-shadow: inset 5px 5px 7px #c8accf, inset -5px -5px 10px #f7ebfa;
+      }
+      .nav-link:hover{
+        border-color: transparent;
+      }
+      .nav-link{
+        border-color: transparent;
+      }
+    }
+    .tab-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .search{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .all-movies-sec {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+
+      padding: 0 70px;
+    }
+  
+  }
+}
+
+.card-container {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: .4rem .4rem .8rem #c8d0e7, 
+    -.4rem -.4rem .8rem white;
+  cursor: pointer;
+  transition: 0.4s;
+  padding: 10px;
+  margin-top: 30px;
+  .card-inner {
+    display: flex;
+    height: 100%;
+    .left {
+      width: 30%;
+      .poster {
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+    .right {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      padding-left: 40px;
+
+      .top {
+        font-size: 24px;
+        font-weight: normal;
+        text-transform: capitalize;
+      }
+      .mid {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+.card-container:hover {
+  transform: scale(0.9, 0.9);
+  
+}
